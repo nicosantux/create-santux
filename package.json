@@ -46,7 +46,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-unicorn": "53.0.0",
-    "husky": "9.0.11",
+    "husky": "9.1.4",
     "prettier": "3.2.5",
     "tsup": "8.1.0",
     "typescript": "5.5.4"
