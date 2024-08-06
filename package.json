@@ -2,7 +2,7 @@
   "name": "create-santux",
   "version": "1.0.0",
   "type": "module",
-  "main": "./build/src/index.js",
+  "main": "build/index.js",
   "author": {
     "name": "Nicolás Santuccio",
     "email": "nico.santuccio@gmail.com"
@@ -10,20 +10,24 @@
   "description": "Project initializer for React and Next.js apps.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicosantux/create-santux"
+    "url": "git+https://github.com/nicosantux/create-santux"
   },
+  "files": [
+    "build/**/*",
+    "README.md"
+  ],
   "keywords": [
-    "generator",
-    "react",
-    "next",
-    "node",
-    "vscode",
+    "commitlint",
+    "eslint",
     "husky",
-    "github"
+    "next",
+    "prettier",
+    "react",
+    "typescript"
   ],
   "license": "ISC",
   "bin": {
-    "create-santux": "./build/index.js"
+    "create-santux": "build/index.js"
   },
   "scripts": {
     "build": "tsup",
