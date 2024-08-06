@@ -10,6 +10,7 @@ import { getPackageManger } from '../utils/get-package-manager.js'
 import { getProjectName } from '../utils/get-project-name.js'
 import { getTsPreference } from '../utils/get-ts-preference.js'
 import { replaceFiles } from '../utils/read-files.js'
+import { renameGitignore } from '../utils/rename-gitignore.js'
 import { sleep } from '../utils/sleep.js'
 
 export async function nextGenerator({ typescript }: { typescript?: boolean } = {}) {
@@ -26,6 +27,8 @@ export async function nextGenerator({ typescript }: { typescript?: boolean } = {
   await copyFromTemplate(includeTs ? 'next/ts' : 'next/js', projectName)
 
   await copyFromTemplate('README.md', join(projectName, 'README.md'))
+
+  await renameGitignore(projectName)
 
   await replaceFiles(projectName)
 
