@@ -30,4 +30,4 @@ yarn create santux
 
 ## CLI Options
 
-You can use the flag `-h` or `--help` to see all available options.
+Use `-h` or `--help` to see all available options.
