@@ -12,11 +12,11 @@ importers:
         specifier: 0.10.0
         version: 0.10.0
       '@commander-js/extra-typings':
-        specifier: 12.1.0
-        version: 12.1.0(commander@12.1.0)
+        specifier: 13.1.0
+        version: 13.1.0(commander@13.1.0)
       commander:
-        specifier: 12.1.0
-        version: 12.1.0
+        specifier: 13.1.0
+        version: 13.1.0
       picocolors:
         specifier: 1.1.1
         version: 1.1.1
@@ -80,10 +80,10 @@ packages:
   '@clack/prompts@0.10.0':
     resolution: {integrity: sha512-H3rCl6CwW1NdQt9rE3n373t7o5cthPv7yUoxF2ytZvyvlJv89C5RYMJu83Hed8ODgys5vpBU0GKxIRG83jd8NQ==}
 
-  '@commander-js/extra-typings@12.1.0':
-    resolution: {integrity: sha512-wf/lwQvWAA0goIghcb91dQYpkLBcyhOhQNqG/VgWhnKzgt+UOMvra7EX/2fv70arm5RW+PUHoQHHDa6/p77Eqg==}
+  '@commander-js/extra-typings@13.1.0':
+    resolution: {integrity: sha512-q5P52BYb1hwVWE6dtID7VvuJWrlfbCv4klj7BjUUOqMz4jbSZD4C9fJ9lRjL2jnBGTg+gDDlaXN51rkWcLk4fg==}
     peerDependencies:
-      commander: ~12.1.0
+      commander: ~13.1.0
 
   '@commitlint/cli@19.7.1':
     resolution: {integrity: sha512-iObGjR1tE/PfDtDTEfd+tnRkB3/HJzpQqRTyofS2MPPkDn1mp3DBC8SoPDayokfAy+xKhF8+bwRCJO25Nea0YQ==}
@@ -740,8 +740,8 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
-  commander@12.1.0:
-    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
 
   commander@4.1.1:
@@ -2044,9 +2044,9 @@ snapshots:
       picocolors: 1.1.1
       sisteransi: 1.0.5
 
-  '@commander-js/extra-typings@12.1.0(commander@12.1.0)':
+  '@commander-js/extra-typings@13.1.0(commander@13.1.0)':
     dependencies:
-      commander: 12.1.0
+      commander: 13.1.0
 
   '@commitlint/cli@19.7.1(@types/node@22.13.8)(typescript@5.7.3)':
     dependencies:
@@ -2689,7 +2689,7 @@ snapshots:
 
   color-name@1.1.4: {}
 
-  commander@12.1.0: {}
+  commander@13.1.0: {}
 
   commander@4.1.1: {}
 
