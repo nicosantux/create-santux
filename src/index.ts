@@ -1,4 +1,4 @@
-#!/usr/bin/env node --no-warnings=ExperimentalWarning
+#!/usr/bin/env node
 
 import { Command } from '@commander-js/extra-typings'
 
@@ -21,7 +21,7 @@ const program = new Command('create-santux')
 program
   .command('react')
   .description('Initialize a React project with Vite')
-  .option('-ts, --typescript', 'Initialize the project with TypeScript')
+  .option('--ts, --typescript', 'Initialize the project with TypeScript')
   .option('--no-ts, --no-typescript', 'Initialize the project with JavaScript')
   // TODO: Implement Tailwindcss
   // .option('-tw, --tailwind', 'Use Tailwindcss')
@@ -34,7 +34,7 @@ program
 program
   .command('next')
   .description('Initialize a Next project')
-  .option('-ts, --typescript', 'Initialize the project with TypeScript')
+  .option('--ts, --typescript', 'Initialize the project with TypeScript')
   .option('--no-ts, --no-typescript', 'Initialize the project with JavaScript')
   // TODO: Implement Tailwindcss
   // .option('-tw, --tailwind', 'Use Tailwindcss')
