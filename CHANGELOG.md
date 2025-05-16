@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/nicosantux/create-santux/compare/v1.1.1...v1.1.2) (2025-05-16)
+
+
+### 🐛 Bug Fixes
+
+* **templates:** remove old eslint config file ([#143](https://github.com/nicosantux/create-santux/issues/143)) ([be46c48](https://github.com/nicosantux/create-santux/commit/be46c4856205730d7233bc0fc900fd148f368941))
+
 ## [1.1.1](https://github.com/nicosantux/create-santux/compare/v1.1.0...v1.1.1) (2025-05-16)
 
 
