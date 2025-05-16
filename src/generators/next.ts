@@ -15,7 +15,7 @@ import { replaceFiles } from '../utils/read-files.js'
 import { renameGitignore } from '../utils/rename-gitignore.js'
 import { sleep } from '../utils/sleep.js'
 
-export async function nextGenerator({ typescript }: { typescript?: boolean }) {
+export async function nextGenerator({ typescript }: { typescript?: boolean } = {}) {
   const packageManager = await getPackageManger()
   const spinner = createSpinner()
   const projectName = await getProjectName()
