@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/nicosantux/create-santux/compare/v1.1.0...v1.1.1) (2025-05-16)
+
+
+### 🐛 Bug Fixes
+
+* **generators:** add default options value ([#141](https://github.com/nicosantux/create-santux/issues/141)) ([990ac48](https://github.com/nicosantux/create-santux/commit/990ac48b27eec806a1ef635edf5804c914de21d9))
+
 ## [1.1.0](https://github.com/nicosantux/create-santux/compare/v1.0.2...v1.1.0) (2025-05-16)
 
 
