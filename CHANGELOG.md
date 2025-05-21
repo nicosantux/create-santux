@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.3](https://github.com/nicosantux/create-santux/compare/v1.1.2...v1.1.3) (2025-05-21)
+
+
+### 🐛 Bug Fixes
+
+* bump @types/node in /src/dependencies/typescript ([#146](https://github.com/nicosantux/create-santux/issues/146)) ([f36a724](https://github.com/nicosantux/create-santux/commit/f36a7249420ab9cff5374e82902cb98737b04028))
+* bump @types/react in /src/dependencies/typescript ([#145](https://github.com/nicosantux/create-santux/issues/145)) ([2b6c713](https://github.com/nicosantux/create-santux/commit/2b6c713f5ff259ef76494af232b1f6d21c2f3dbe))
+
 ## [1.1.2](https://github.com/nicosantux/create-santux/compare/v1.1.1...v1.1.2) (2025-05-16)
 
 
