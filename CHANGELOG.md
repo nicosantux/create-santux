@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.3](https://github.com/nicosantux/create-santux/compare/v1.1.2...v1.1.3) (2025-06-02)
+
+
+### 🐛 Bug Fixes
+
+* bump @eslint/js from 9.27.0 to 9.28.0 in /src/dependencies/base ([#155](https://github.com/nicosantux/create-santux/issues/155)) ([161cb9c](https://github.com/nicosantux/create-santux/commit/161cb9c784a0a6a95caa3b18c7ad2525ae04b403))
+* bump @next/eslint-plugin-next in /src/dependencies/next ([#159](https://github.com/nicosantux/create-santux/issues/159)) ([1ce60cd](https://github.com/nicosantux/create-santux/commit/1ce60cd5f58acd8145245fd48fe426363db62e69))
+* bump @stylistic/eslint-plugin in /src/dependencies/base ([#157](https://github.com/nicosantux/create-santux/issues/157)) ([6d9a998](https://github.com/nicosantux/create-santux/commit/6d9a998723836ab54300c49e7408ace23e27a7ac))
+* bump @types/node in /src/dependencies/typescript ([#146](https://github.com/nicosantux/create-santux/issues/146)) ([f36a724](https://github.com/nicosantux/create-santux/commit/f36a7249420ab9cff5374e82902cb98737b04028))
+* bump @types/react in /src/dependencies/typescript ([#145](https://github.com/nicosantux/create-santux/issues/145)) ([2b6c713](https://github.com/nicosantux/create-santux/commit/2b6c713f5ff259ef76494af232b1f6d21c2f3dbe))
+* bump @vitejs/plugin-react-swc in /src/dependencies/vite ([#161](https://github.com/nicosantux/create-santux/issues/161)) ([2e8c0ab](https://github.com/nicosantux/create-santux/commit/2e8c0ab69b98850214556e4e0fe2946a3f89568e))
+* bump eslint from 9.27.0 to 9.28.0 in /src/dependencies/base ([#158](https://github.com/nicosantux/create-santux/issues/158)) ([4e35613](https://github.com/nicosantux/create-santux/commit/4e3561320d19c9d50fd436077ca17a2a932f22d7))
+* bump globals from 16.1.0 to 16.2.0 in /src/dependencies/base ([#156](https://github.com/nicosantux/create-santux/issues/156)) ([17bd42a](https://github.com/nicosantux/create-santux/commit/17bd42a20b4d3b8b1bba584306a409a82e3f613e))
+* bump typescript-eslint in /src/dependencies/typescript ([#160](https://github.com/nicosantux/create-santux/issues/160)) ([aa3d9df](https://github.com/nicosantux/create-santux/commit/aa3d9dfa6f4c0f28433ab627dea2dfc0164c0c9f))
+
 ## [1.1.2](https://github.com/nicosantux/create-santux/compare/v1.1.1...v1.1.2) (2025-05-16)
 
 
