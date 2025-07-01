@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.4](https://github.com/nicosantux/create-santux/compare/v1.1.3...v1.1.4) (2025-07-01)
+
+
+### 🐛 Bug Fixes
+
+* bump @eslint/js from 9.28.0 to 9.30.0 in /src/dependencies/base ([#162](https://github.com/nicosantux/create-santux/issues/162)) ([367ea4f](https://github.com/nicosantux/create-santux/commit/367ea4fb9124b0113229bffefab46d12e9424341))
+* bump @next/eslint-plugin-next in /src/dependencies/next ([#183](https://github.com/nicosantux/create-santux/issues/183)) ([ff4aa2f](https://github.com/nicosantux/create-santux/commit/ff4aa2f18996f41949eb09a5a930ddc98bb96c45))
+* bump @types/react in /src/dependencies/typescript ([#168](https://github.com/nicosantux/create-santux/issues/168)) ([b47c636](https://github.com/nicosantux/create-santux/commit/b47c636e161f6de7fcee4d6ed786c3701d5b605b))
+* bump @types/react-dom in /src/dependencies/typescript ([#167](https://github.com/nicosantux/create-santux/issues/167)) ([9b0f44f](https://github.com/nicosantux/create-santux/commit/9b0f44f98fb5991fc9b1816adc1b0fc1ea3f16ff))
+* bump @vitejs/plugin-react-swc in /src/dependencies/vite ([#171](https://github.com/nicosantux/create-santux/issues/171)) ([f0dc707](https://github.com/nicosantux/create-santux/commit/f0dc707d18abe2a73fd69dbcac91762fc51a9580))
+* bump eslint from 9.28.0 to 9.30.0 in /src/dependencies/base ([#166](https://github.com/nicosantux/create-santux/issues/166)) ([e077a21](https://github.com/nicosantux/create-santux/commit/e077a21acba8e5da04d5fea5cb648abb0c185624))
+* bump eslint-plugin-check-file in /src/dependencies/base ([#180](https://github.com/nicosantux/create-santux/issues/180)) ([1e708c5](https://github.com/nicosantux/create-santux/commit/1e708c5cae215bda23a35142d45354afa7838427))
+* bump eslint-plugin-import in /src/dependencies/base ([#165](https://github.com/nicosantux/create-santux/issues/165)) ([df2bd61](https://github.com/nicosantux/create-santux/commit/df2bd61bd3c9f9703d9650bf05b006b92a9ccdb7))
+* bump globals from 16.2.0 to 16.3.0 in /src/dependencies/base ([#163](https://github.com/nicosantux/create-santux/issues/163)) ([07d9836](https://github.com/nicosantux/create-santux/commit/07d98365e11cb3207070829f94db369d1c6bd54d))
+* bump next from 15.3.2 to 15.3.4 in /src/dependencies/next ([#182](https://github.com/nicosantux/create-santux/issues/182)) ([06f37d8](https://github.com/nicosantux/create-santux/commit/06f37d8795b2a379de5cb754180e10dd87a06c58))
+* bump prettier from 3.5.3 to 3.6.2 in /src/dependencies/base ([#164](https://github.com/nicosantux/create-santux/issues/164)) ([ff69dcb](https://github.com/nicosantux/create-santux/commit/ff69dcbaadf8597d9e846981f836d418d6379340))
+
 ## [1.1.3](https://github.com/nicosantux/create-santux/compare/v1.1.2...v1.1.3) (2025-06-02)
 
 
