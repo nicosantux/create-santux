@@ -4,9 +4,7 @@ import { Command } from '@commander-js/extra-typings'
 
 import pkgJson from '../package.json' with { type: 'json' }
 
-import { baseGenerator } from './generators/base.js'
-import { nextGenerator } from './generators/next.js'
-import { reactGenerator } from './generators/react.js'
+import { createProject } from './generators/create-project.js'
 import { showIntro, showOutro } from './utils/intro-outro.js'
 
 const program = new Command('create-santux')
@@ -14,7 +12,7 @@ const program = new Command('create-santux')
   .version(pkgJson.version)
   .action(async () => {
     showIntro()
-    await baseGenerator()
+    await createProject()
     showOutro()
   })
 
@@ -25,9 +23,9 @@ program
   .option('--no-ts, --no-typescript', 'Initialize the project with JavaScript')
   // TODO: Implement Tailwindcss
   // .option('-tw, --tailwind', 'Use Tailwindcss')
-  .action(async (options) => {
+  .action(async ({ typescript }) => {
     showIntro()
-    await reactGenerator(options)
+    await createProject({ framework: 'react', typescript })
     showOutro()
   })
 
@@ -38,9 +36,9 @@ program
   .option('--no-ts, --no-typescript', 'Initialize the project with JavaScript')
   // TODO: Implement Tailwindcss
   // .option('-tw, --tailwind', 'Use Tailwindcss')
-  .action(async (options) => {
+  .action(async ({ typescript }) => {
     showIntro()
-    await nextGenerator(options)
+    await createProject({ framework: 'next', typescript })
     showOutro()
   })
 

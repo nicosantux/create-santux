@@ -3,10 +3,12 @@ import { join } from 'node:path'
 import { spinner as createSpinner, note } from '@clack/prompts'
 import colors from 'picocolors'
 
+import { type Framework } from '../constants/frameworks.js'
 import { addNodeVersion } from '../utils/add-node-version.js'
 import { buildDependencies } from '../utils/build-dependencies.js'
 import { copyFromTemplate } from '../utils/copy-from-template.js'
 import { execCmd } from '../utils/exec-command.js'
+import { getFramework } from '../utils/get-framework.js'
 import { getPackageManger } from '../utils/get-package-manager.js'
 import { getProjectName } from '../utils/get-project-name.js'
 import { getTsPreference } from '../utils/get-ts-preference.js'
@@ -15,17 +17,24 @@ import { replaceFiles } from '../utils/read-files.js'
 import { renameGitignore } from '../utils/rename-gitignore.js'
 import { sleep } from '../utils/sleep.js'
 
-export async function reactGenerator({ typescript }: { typescript?: boolean } = {}) {
+export async function createProject({
+  framework,
+  typescript,
+}: { framework?: Framework; typescript?: boolean } = {}) {
   const packageManager = await getPackageManger()
   const spinner = createSpinner()
   const projectName = await getProjectName()
   const projectPath = join(process.cwd(), projectName)
 
   try {
+    const selectedFramework = framework ?? (await getFramework())
     const includeTs = typescript ?? (await getTsPreference())
 
-    await copyFromTemplate(includeTs ? 'react/ts' : 'react/js', projectName)
-    await buildDependencies({ generator: 'react', projectName, typescript: includeTs })
+    await copyFromTemplate(
+      includeTs ? `${selectedFramework}/ts` : `${selectedFramework}/js`,
+      projectName,
+    )
+    await buildDependencies({ generator: selectedFramework, projectName, typescript: includeTs })
     await copyFromTemplate('README.md', join(projectName, 'README.md'))
     await renameGitignore(projectName)
     await replaceFiles(projectName)
