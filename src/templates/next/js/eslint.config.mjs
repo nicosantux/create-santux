@@ -57,7 +57,7 @@ export default [
         { '**/*.{js,jsx,ts,tsx}': 'KEBAB_CASE' },
         { ignoreMiddleExtensions: true },
       ],
-      'check-file/folder-naming-convention': ['error', { 'src/**/': 'KEBAB_CASE' }],
+      'check-file/folder-naming-convention': ['error', { 'src/**/': 'NEXT_JS_APP_ROUTER_CASE' }],
     },
   },
   // Import order
@@ -80,7 +80,7 @@ export default [
           pathGroups: [
             { pattern: '@/**', group: 'internal', position: 'after' },
             {
-              pattern: '{react,react-dom,react-dom/**}',
+              pattern: '{next,next/**,react,react-dom,react-dom/**}',
               group: 'builtin',
               position: 'before',
             },
