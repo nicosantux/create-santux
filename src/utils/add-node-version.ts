@@ -10,9 +10,14 @@ import { execCmd } from './exec-command.js'
 export async function addNodeVersion(projectName: string) {
   try {
     const response = await fetch('https://nodejs.org/dist/index.json')
-    const data = (await response.json()) as { lts: string | boolean; version: string }[]
 
-    const latestLts = data.find((nodeVersion) => Boolean(nodeVersion.lts))
+    const data = (await response.json()) as {
+      lts: string | boolean
+      version: string
+      security: boolean
+    }[]
+
+    const latestLts = data.find((nodeVersion) => Boolean(nodeVersion.lts) && nodeVersion.security)
 
     if (!latestLts) throw new Error('No LTS version found')
 
