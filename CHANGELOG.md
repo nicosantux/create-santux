@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/nicosantux/create-santux/compare/v1.1.4...v2.0.0) (2025-07-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* unify generators ([#199](https://github.com/nicosantux/create-santux/issues/199))
+
+### 🔄 Refactoring
+
+* unify generators ([#199](https://github.com/nicosantux/create-santux/issues/199)) ([6fa7ca8](https://github.com/nicosantux/create-santux/commit/6fa7ca8df030fbcb3fdd01d9a530cd528b481610))
+
 ## [1.1.4](https://github.com/nicosantux/create-santux/compare/v1.1.3...v1.1.4) (2025-07-20)
 
 
