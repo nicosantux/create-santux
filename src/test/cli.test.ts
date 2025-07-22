@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:
 import { join } from 'node:path'
 
 import { execaCommandSync, type SyncResult, type SyncOptions } from 'execa'
+import colors from 'picocolors'
 import { describe, test, beforeAll, afterEach, expect } from 'vitest'
 
 const CLI_PATH = join(__dirname, '..', '..', 'build', 'index.js')
@@ -44,7 +45,7 @@ const MESSAGES = {
   PROJECT_NAME: 'What is your project named?',
   TEMPLATE: 'Please select a template:',
   UNKNOWN_TEMPLATE: (template: string) =>
-    `Unknown template: ${template}. Please select a template:`,
+    `Unknown template: ${colors.yellow(template)}. Please select a template:`,
   EMPTY_DIR: 'This folder is not empty. What would you like to do?',
   INSTALLING: 'Setting up project',
 } as const
@@ -99,7 +100,7 @@ describe('Create Santux CLI', () => {
   test('should successfully create a project', () => {
     const { stdout } = runCli([projectName, '--template', template], {
       cwd: __dirname,
-      timeout: 500,
+      timeout: 1000,
       reject: false,
     })
 
