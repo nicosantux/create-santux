@@ -13,6 +13,7 @@ jobs:
   format:
     name: 💅 Format
     runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]'
     steps:
       - name: 🎯 Checkout
         uses: actions/checkout@v4
@@ -38,6 +39,7 @@ jobs:
   lint:
     name: 🧹 Lint
     runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]'
     steps:
       - name: 🎯 Checkout
         uses: actions/checkout@v4
@@ -64,6 +66,7 @@ jobs:
     name: 🏗️ Build
     needs: [lint, format]
     runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]'
     steps:
       - name: 🎯 Checkout
         uses: actions/checkout@v4
@@ -96,6 +99,7 @@ jobs:
     name: 🧪 Test
     needs: [build]
     runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]'
     steps:
       - name: 🎯 Checkout
         uses: actions/checkout@v4
