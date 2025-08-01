@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.1](https://github.com/nicosantux/create-santux/compare/v2.0.0...v2.0.1) (2025-08-01)
+
+
+### 🐛 Bug Fixes
+
+* bump @eslint/js from 9.31.0 to 9.32.0 in /src/dependencies/base ([#205](https://github.com/nicosantux/create-santux/issues/205)) ([d403c4a](https://github.com/nicosantux/create-santux/commit/d403c4a811adc6103c0ad2e75db52af20d8e9b05))
+* bump @next/eslint-plugin-next in /src/dependencies/next ([#208](https://github.com/nicosantux/create-santux/issues/208)) ([e2dce12](https://github.com/nicosantux/create-santux/commit/e2dce12a00a72f3c2b4255a0fa227ee526a9ce8b))
+* bump @stylistic/eslint-plugin in /src/dependencies/base ([#207](https://github.com/nicosantux/create-santux/issues/207)) ([fd9b119](https://github.com/nicosantux/create-santux/commit/fd9b119571825465cb9ae95e07791a0f5255bec0))
+* bump @types/node in /src/dependencies/typescript ([#210](https://github.com/nicosantux/create-santux/issues/210)) ([64b1134](https://github.com/nicosantux/create-santux/commit/64b1134521a40175dd1cd19e13213766c98659ef))
+* bump eslint from 9.31.0 to 9.32.0 in /src/dependencies/base ([#206](https://github.com/nicosantux/create-santux/issues/206)) ([51cf57b](https://github.com/nicosantux/create-santux/commit/51cf57bccf985738be061a6b5153d01041e132f8))
+* bump next from 15.4.2 to 15.4.5 in /src/dependencies/next ([#209](https://github.com/nicosantux/create-santux/issues/209)) ([3edc09d](https://github.com/nicosantux/create-santux/commit/3edc09deecc34102b92882c0544f9b2ae55b845d))
+* bump vite from 7.0.5 to 7.0.6 in /src/dependencies/vite ([#212](https://github.com/nicosantux/create-santux/issues/212)) ([3da02b6](https://github.com/nicosantux/create-santux/commit/3da02b69723a709db593def07c5c8964bccc506f))
+
 ## [2.0.0](https://github.com/nicosantux/create-santux/compare/v1.1.4...v2.0.0) (2025-07-22)
 
 
