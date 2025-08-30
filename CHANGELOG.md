@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/nicosantux/create-santux/compare/v2.0.1...v2.0.2) (2025-08-30)
+
+
+### 🐛 Bug Fixes
+
+* bump next from 15.4.5 to 15.4.7 in /src/dependencies/next ([#223](https://github.com/nicosantux/create-santux/issues/223)) ([5f6ce64](https://github.com/nicosantux/create-santux/commit/5f6ce64c2c7eda70053f6e8e7cbb35b915668b5c))
+
 ## [2.0.1](https://github.com/nicosantux/create-santux/compare/v2.0.0...v2.0.1) (2025-08-05)
 
 
