@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/nicosantux/create-santux/compare/v2.1.1...v2.2.0) (2025-10-29)
+
+
+### ✨ New Features
+
+* **templates:** update react and next to the latest versions ([#294](https://github.com/nicosantux/create-santux/issues/294)) ([0a8e37f](https://github.com/nicosantux/create-santux/commit/0a8e37f3217c9d2d5d861e6a98604425bd7ac952))
+
 ## [2.1.1](https://github.com/nicosantux/create-santux/compare/v2.1.0...v2.1.1) (2025-10-29)
 
 
