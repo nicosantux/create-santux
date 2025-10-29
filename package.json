@@ -10,7 +10,7 @@
   "description": "Project initializer for React and Next.js apps.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nicosantux/create-santux"
+    "url": "git+https://github.com/nicosantux/create-santux.git"
   },
   "files": [
     "build/**/*",
