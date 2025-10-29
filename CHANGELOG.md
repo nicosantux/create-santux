@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/nicosantux/create-santux/compare/v2.2.0...v2.2.1) (2025-10-29)
+
+
+### 🐛 Bug Fixes
+
+* update to the latest npm version in publish job ([#296](https://github.com/nicosantux/create-santux/issues/296)) ([6a2bda2](https://github.com/nicosantux/create-santux/commit/6a2bda297922ad8300e045af2966c71a84f7f51b))
+
 ## [2.2.0](https://github.com/nicosantux/create-santux/compare/v2.1.1...v2.2.0) (2025-10-29)
 
 
