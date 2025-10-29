@@ -1,6 +1,7 @@
 import eslint from '@eslint/js'
 import nextPlugin from '@next/eslint-plugin-next'
-import eslintConfigPrettier from 'eslint-config-prettier'
+import { defineConfig, globalIgnores } from 'eslint/config'
+import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import checkFilePlugin from 'eslint-plugin-check-file'
 import importOrderPlugin from 'eslint-plugin-import'
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y'
@@ -9,14 +10,12 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import globals from 'globals'
 
-export default [
-  {
-    ignores: ['node_modules', '.next', 'out'],
-  },
+export default defineConfig([
+  globalIgnores(['node_modules', '.next/**', 'out/**', 'build/**']),
   // Vanilla ESLint
   {
+    extends: [eslint.configs.recommended],
     rules: {
-      ...eslint.configs.recommended.rules,
       eqeqeq: ['error', 'always', { null: 'ignore' }],
       'no-await-in-loop': 'error',
       'no-console': 'error',
@@ -27,18 +26,6 @@ export default [
       'no-self-compare': 'error',
       'no-undef-init': 'warn',
       'no-unneeded-ternary': 'error',
-      'no-unused-vars': [
-        'error',
-        {
-          args: 'all',
-          argsIgnorePattern: '^_',
-          caughtErrors: 'all',
-          caughtErrorsIgnorePattern: '^_',
-          destructuredArrayIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-          ignoreRestSiblings: true,
-        },
-      ],
       'no-var': 'error',
       'object-shorthand': 'warn',
       'prefer-const': 'warn',
@@ -103,20 +90,17 @@ export default [
   // React
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
+    extends: [
+      reactPlugin.configs.flat.recommended,
+      reactHooksPlugin.configs.flat['recommended-latest'],
+      jsxA11yPlugin.flatConfigs.recommended,
+      reactPlugin.configs.flat['jsx-runtime'],
+    ],
     languageOptions: {
       globals: { ...globals.browser },
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
-    plugins: {
-      react: reactPlugin,
-      'react-hooks': reactHooksPlugin,
-      'jsx-a11y': jsxA11yPlugin,
-    },
     rules: {
-      ...reactPlugin.configs.recommended.rules,
-      ...reactHooksPlugin.configs.recommended.rules,
-      ...jsxA11yPlugin.configs.recommended.rules,
-      ...reactPlugin.configs['jsx-runtime'].rules,
       'react/function-component-definition': 'warn',
       'react/hook-use-state': 'error',
       'react/jsx-boolean-value': 'warn',
@@ -162,4 +146,4 @@ export default [
   },
   // Prettier
   eslintConfigPrettier,
-]
+])
