@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.2](https://github.com/nicosantux/create-santux/compare/v2.2.1...v2.2.2) (2025-11-03)
+
+
+### 🐛 Bug Fixes
+
+* bump @eslint/js from 9.38.0 to 9.39.0 in /src/dependencies/base ([#310](https://github.com/nicosantux/create-santux/issues/310)) ([8f0b7d6](https://github.com/nicosantux/create-santux/commit/8f0b7d615c6ba0f794ce76e5cb67afb1f8ddb03b))
+* bump @types/node in /src/dependencies/typescript ([#312](https://github.com/nicosantux/create-santux/issues/312)) ([1e3920a](https://github.com/nicosantux/create-santux/commit/1e3920afaf8e20b744e8f0d9b0f9fed69e5dfef9))
+* bump eslint from 9.38.0 to 9.39.0 in /src/dependencies/base ([#309](https://github.com/nicosantux/create-santux/issues/309)) ([cb3639a](https://github.com/nicosantux/create-santux/commit/cb3639a18ac31bc264505eb3d2c5d28029dafe53))
+* bump eslint-plugin-check-file in /src/dependencies/base ([#311](https://github.com/nicosantux/create-santux/issues/311)) ([44d1ed1](https://github.com/nicosantux/create-santux/commit/44d1ed1dea36b791dfd057245dd76c8e29ccea11))
+* bump globals from 16.4.0 to 16.5.0 in /src/dependencies/base ([#308](https://github.com/nicosantux/create-santux/issues/308)) ([c55f9b9](https://github.com/nicosantux/create-santux/commit/c55f9b9c56b95d4ae33db66e0969d9224f169660))
+* bump typescript-eslint in /src/dependencies/typescript ([#314](https://github.com/nicosantux/create-santux/issues/314)) ([57a3dbf](https://github.com/nicosantux/create-santux/commit/57a3dbfeb20532cd0e6da6046463598d93ea6d70))
+
 ## [2.2.1](https://github.com/nicosantux/create-santux/compare/v2.2.0...v2.2.1) (2025-10-29)
 
 
