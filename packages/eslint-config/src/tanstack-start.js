@@ -5,7 +5,7 @@ import { importOrder } from './import-order.js'
 import { reactConfig } from './react.js'
 
 export default defineConfig([
-  globalIgnores(['**/.output/**', '**/.tanstack/**']),
+  globalIgnores(['**/.output/**', '**/.tanstack/**', '**/routeTree.gen.ts']),
   {
     rules: {
       'import-x/order': importOrder(['react', 'react-dom', 'react-dom/**']),

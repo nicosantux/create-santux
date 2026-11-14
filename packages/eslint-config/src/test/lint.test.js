@@ -138,6 +138,7 @@ describe('react-vite entry', () => {
 
 describe('tanstack-start entry', () => {
   let cwd
+  let eslint
   let results
 
   beforeAll(async () => {
@@ -156,7 +157,7 @@ describe('tanstack-start entry', () => {
       'export const Route = 1\n\nexport function Page() {\n  return <img src="/a.png" />\n}\n',
     )
 
-    const eslint = new ESLint({
+    eslint = new ESLint({
       cwd,
       overrideConfigFile: true,
       overrideConfig: [...base, ...tanstackStart],
@@ -180,6 +181,10 @@ describe('tanstack-start entry', () => {
     expect(ruleIds('__root.tsx')).not.toContain('check-file/filename-naming-convention')
     expect(ruleIds('dashboard.tsx')).not.toContain('check-file/folder-naming-convention')
     expect(ruleIds('BadName.tsx')).toContain('check-file/filename-naming-convention')
+  })
+
+  it('ignores the generated route tree', async () => {
+    expect(await eslint.isPathIgnored(join(cwd, 'src/routeTree.gen.ts'))).toBe(true)
   })
 })
 
