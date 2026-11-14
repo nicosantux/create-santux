@@ -1,6 +1,6 @@
 {
   "name": "@santux/oxc-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Shared oxlint, oxfmt and commitlint config for TypeScript projects.",
   "keywords": [
     "commitlint",
