@@ -1,0 +1,15 @@
+/** @type {import('prettier').Config} */
+export default {
+  arrowParens: 'always',
+  bracketSameLine: false,
+  bracketSpacing: true,
+  endOfLine: 'auto',
+  jsxSingleQuote: true,
+  printWidth: 100,
+  quoteProps: 'as-needed',
+  semi: false,
+  singleQuote: true,
+  tabWidth: 2,
+  trailingComma: 'all',
+  useTabs: false,
+}
