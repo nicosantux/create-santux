@@ -1,38 +1,38 @@
 💻 source:
   - changed-files:
       - any-glob-to-any-file:
-          - src/**
+          - packages/*/src/**
 
 📝 documentation:
   - changed-files:
       - any-glob-to-any-file:
           - README.md
+          - packages/*/README.md
 
 🏭 build:
   - changed-files:
       - any-glob-to-any-file:
           - .node-version
-          - tsconfig.json
-          - tsup.config.ts
+          - packages/*/tsconfig.json
+          - packages/*/tsdown.config.ts
 
 ⚙️ configuration:
   - changed-files:
       - any-glob-to-any-file:
-          - .commitlintrc.json
+          - commitlint.config.js
           - .editorconfig
-          - .eslintignore
-          - .eslintrc.json
+          - oxfmt.config.ts
+          - oxlint.config.ts
           - .gitignore
           - .node-version
           - .prettierignore
-          - .prettierrc.json
-          - .tsconfig.json
-          - .tsup.config.ts
 
 📦 dependencies:
   - changed-files:
       - any-glob-to-any-file:
           - package.json
+          - pnpm-workspace.yaml
+          - packages/*/package.json
           - pnpm-lock.yaml
 
 🤖 ci/cd:
