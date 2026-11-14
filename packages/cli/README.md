@@ -21,3 +21,9 @@ Use `-h` or `--help` to see all available options.
 ## Updating
 
 After a config package update, run `npx santux init` again: it installs the latest config package and the tool versions it pins, and never rewrites your config files.
+
+## Migrating from `create-santux`
+
+`santux` replaces the deprecated `create-santux` package. It no longer creates projects from templates: create the project with the official tool of your framework (for example `create-next-app` or `create-vite`), then run `npx santux init` inside it.
+
+Projects created with `create-santux` can run `npx santux init` too. It replaces their lint and format configs with the ones from the config package of the chosen Toolchain, and lists every file it removes or replaces before applying the plan.
