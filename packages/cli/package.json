@@ -1,0 +1,58 @@
+{
+  "name": "santux",
+  "version": "2.2.2",
+  "description": "Applies an opinionated tooling setup to an existing TypeScript project.",
+  "keywords": [
+    "commitlint",
+    "eslint",
+    "husky",
+    "oxc",
+    "oxfmt",
+    "oxlint",
+    "prettier",
+    "typescript"
+  ],
+  "license": "ISC",
+  "author": {
+    "name": "Nicolás Santuccio",
+    "email": "nico.santuccio@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicosantux/santux.git",
+    "directory": "packages/cli"
+  },
+  "bin": {
+    "santux": "build/index.js"
+  },
+  "files": [
+    "build/**/*",
+    "README.md"
+  ],
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "link-cli": "pnpm build && npm uninstall -g santux && npm link",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@commander-js/extra-typings": "15.0.0",
+    "commander": "15.0.0",
+    "execa": "10.2.1",
+    "jsonc-parser": "3.3.1",
+    "magicast": "0.5.5"
+  },
+  "devDependencies": {
+    "@clack/prompts": "1.8.1",
+    "@types/node": "24.19.2",
+    "tsdown": "0.23.7",
+    "typescript": "6.0.3",
+    "vitest": "5.1.0"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

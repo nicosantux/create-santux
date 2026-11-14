@@ -1,0 +1,127 @@
+{
+  "name": "@santux/oxc-config",
+  "version": "0.0.0",
+  "description": "Shared oxlint, oxfmt and commitlint config for TypeScript projects.",
+  "keywords": [
+    "commitlint",
+    "oxc",
+    "oxfmt",
+    "oxlint"
+  ],
+  "license": "ISC",
+  "author": {
+    "name": "Nicolás Santuccio",
+    "email": "nico.santuccio@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicosantux/santux.git",
+    "directory": "packages/oxc-config"
+  },
+  "files": [
+    "src",
+    "!src/test",
+    "README.md"
+  ],
+  "type": "module",
+  "exports": {
+    "./lint": {
+      "types": "./src/lint.d.ts",
+      "default": "./src/lint.js"
+    },
+    "./format": {
+      "types": "./src/format.d.ts",
+      "default": "./src/format.js"
+    },
+    "./format-astro": {
+      "types": "./src/format-astro.d.ts",
+      "default": "./src/format-astro.js"
+    },
+    "./format-next": {
+      "types": "./src/format-next.d.ts",
+      "default": "./src/format-next.js"
+    },
+    "./format-tailwind": {
+      "types": "./src/format-tailwind.d.ts",
+      "default": "./src/format-tailwind.js"
+    },
+    "./commitlint": {
+      "types": "./src/commitlint.d.ts",
+      "default": "./src/commitlint.js"
+    },
+    "./astro": {
+      "types": "./src/astro.d.ts",
+      "default": "./src/astro.js"
+    },
+    "./astro-react": {
+      "types": "./src/astro-react.d.ts",
+      "default": "./src/astro-react.js"
+    },
+    "./next": {
+      "types": "./src/next.d.ts",
+      "default": "./src/next.js"
+    },
+    "./react-vite": {
+      "types": "./src/react-vite.d.ts",
+      "default": "./src/react-vite.js"
+    },
+    "./tanstack-start": {
+      "types": "./src/tanstack-start.d.ts",
+      "default": "./src/tanstack-start.js"
+    },
+    "./tailwind": {
+      "types": "./src/tailwind.d.ts",
+      "default": "./src/tailwind.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@astrojs/compiler-rs": "0.5.2",
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
+    "@shadcn/lint": "0.2.5",
+    "@stylistic/eslint-plugin": "5.10.0",
+    "eslint-plugin-check-file": "3.3.2",
+    "eslint-plugin-react": "7.37.5",
+    "husky": "9.1.7",
+    "oxfmt": "0.77.0",
+    "oxlint": "1.92.0",
+    "oxlint-tsgolint": "7.0.2006",
+    "tailwindcss": "4.3.5",
+    "typescript": "6.0.3",
+    "vitest": "5.1.0"
+  },
+  "peerDependencies": {
+    "@astrojs/compiler-rs": "0.5.2",
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
+    "@shadcn/lint": "0.2.5",
+    "@stylistic/eslint-plugin": "5.10.0",
+    "eslint-plugin-check-file": "3.3.2",
+    "eslint-plugin-react": "7.37.5",
+    "husky": "9.1.7",
+    "oxfmt": "0.77.0",
+    "oxlint": "1.92.0",
+    "oxlint-tsgolint": "7.0.2006"
+  },
+  "peerDependenciesMeta": {
+    "@astrojs/compiler-rs": {
+      "optional": true
+    },
+    "@shadcn/lint": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

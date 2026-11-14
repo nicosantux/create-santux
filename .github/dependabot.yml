@@ -1,31 +1,33 @@
 version: 2
 updates:
-  # CLI updates
   - package-ecosystem: 'npm'
     directory: '/'
-    commit-message:
-      prefix: 'chore'
-    labels:
-      - '📦 dependencies'
-    schedule:
-      interval: 'monthly'
-  - package-ecosystem: 'github-actions'
-    directory: '/'
-    commit-message:
-      prefix: 'ci'
-    schedule:
-      interval: 'monthly'
-    labels:
-      - '📦 dependencies'
-      - '🤖 ci/cd'
-  # Template updates
-  - package-ecosystem: 'npm'
-    directories:
-      - '/src/dependencies/**/*'
+    # Keeps the peers of the config packages exact instead of widening them into ranges
+    versioning-strategy: 'increase'
+    # A tool bump changes the peers of the config packages, so it has to release them
     commit-message:
       prefix: 'fix'
     labels:
       - '📦 dependencies'
     schedule:
       interval: 'monthly'
-      day: 'monday'
+    # Matches minimumReleaseAge in pnpm-workspace.yaml, so pnpm accepts the proposed versions
+    cooldown:
+      default-days: 1
+    # One pull request for all minor and patch updates. Major updates stay separate.
+    groups:
+      minor-and-patch:
+        patterns: ['*']
+        update-types: ['minor', 'patch']
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    commit-message:
+      prefix: 'ci'
+    labels:
+      - '📦 dependencies'
+      - '🤖 ci/cd'
+    schedule:
+      interval: 'monthly'
+    groups:
+      actions:
+        patterns: ['*']
