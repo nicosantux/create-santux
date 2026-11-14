@@ -1,5 +1,5 @@
 build
-bun.lockb
+bun.lock
 dist
 package-lock.json
 pnpm-lock.yaml
