@@ -1265,7 +1265,7 @@ describe('oxc Toolchain', () => {
     ],
     [
       'tanstack-start',
-      ["'**/build'", "'**/dist'", "'**/.output/**'", "'**/.tanstack/**'"],
+      ["'**/build'", "'**/dist'", "'**/.output/**'", "'**/.tanstack/**'", "'**/routeTree.gen.ts'"],
       ['.next'],
     ],
   ] as const)('sets the ignore patterns itself for %s', (framework, included, excluded) => {
@@ -1273,6 +1273,11 @@ describe('oxc Toolchain', () => {
 
     for (const pattern of included) expect(config).toContain(pattern)
     for (const pattern of excluded) expect(config).not.toContain(pattern)
+  })
+
+  it('keeps the generated route tree of TanStack Start out of formatting', () => {
+    expect(files('tanstack-start')['.prettierignore']).toContain('\nrouteTree.gen.ts\n')
+    expect(files('react-vite')['.prettierignore']).not.toContain('routeTree.gen.ts')
   })
 
   it('re-exports the format entry without Framework or Add-ons', () => {

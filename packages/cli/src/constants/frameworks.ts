@@ -44,10 +44,15 @@ export const FRAMEWORK_PEERS = {
 export const OXLINT_IGNORE_PATTERNS = {
   base: ['**/build', '**/dist'],
   next: ['**/.next/**', '**/out/**', '**/next-env.d.ts'],
-  'tanstack-start': ['**/.output/**', '**/.tanstack/**'],
+  'tanstack-start': ['**/.output/**', '**/.tanstack/**', '**/routeTree.gen.ts'],
   astro: ['**/.astro/**'],
   'react-vite': [],
 } as const satisfies Record<string, readonly string[]>
+
+/** Generated files of a Framework that `.prettierignore` lists, so neither Prettier nor oxfmt formats them. */
+export const FORMAT_IGNORE_PATTERNS: Partial<Record<keyof typeof FRONTEND_FRAMEWORKS, string[]>> = {
+  'tanstack-start': ['routeTree.gen.ts'],
+}
 
 /** Add-ons mapped to the dependencies that must all be present to identify them. */
 export const ADDONS = {

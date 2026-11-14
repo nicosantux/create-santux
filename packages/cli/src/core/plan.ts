@@ -15,6 +15,7 @@ import { CONFLICT_DEPENDENCY } from '../constants/conflicts.js'
 import {
   ADDON_LINT_ENTRY,
   ADDON_PEERS,
+  FORMAT_IGNORE_PATTERNS,
   FRAMEWORK_PEERS,
   OXLINT_IGNORE_PATTERNS,
 } from '../constants/frameworks.js'
@@ -150,12 +151,19 @@ export default defineConfig({ ...${['santux', ...entries.map(camelCase)].join(',
 `
 }
 
-function commonFiles(toolchain: Toolchain): Record<string, string> {
+function commonFiles(toolchain: Toolchain, framework: Framework | null): Record<string, string> {
+  const formatIgnores = [
+    'build',
+    'dist',
+    ...Object.keys(LOCKFILES).sort(),
+    ...((framework && FORMAT_IGNORE_PATTERNS[framework]) ?? []),
+  ]
+
   return {
     [COMMITLINT_CONFIG_PATH]: reexport(toolchain, 'commitlint'),
     [HUSKY_HOOK_PATH]: 'npx --no -- commitlint --edit $1\n',
     '.editorconfig': EDITORCONFIG,
-    '.prettierignore': `build\ndist\n${Object.keys(LOCKFILES).sort().join('\n')}\n`,
+    '.prettierignore': `${formatIgnores.join('\n')}\n`,
   }
 }
 
@@ -288,7 +296,7 @@ const NODE_VERSION_FILE = '.node-version'
 
 /** Paths of the files the Tooling layer writes, whichever Toolchain is chosen. */
 export const TOOLING_FILE_PATHS = [
-  ...Object.keys(commonFiles('eslint')),
+  ...Object.keys(commonFiles('eslint', null)),
   ...Object.values(TOOLCHAIN_CONFIG_PATHS).flat(),
   NODE_VERSION_FILE,
 ]
@@ -331,7 +339,7 @@ export function plan(
 
   const files = {
     ...toolchainFiles(choices),
-    ...commonFiles(toolchain),
+    ...commonFiles(toolchain, choices.framework),
     [NODE_VERSION_FILE]: getNodeVersion(environment),
   }
 
