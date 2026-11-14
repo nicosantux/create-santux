@@ -1,8 +1,8 @@
 repository:
-  name: create-santux
-  description: Project initializer for React and Next.js apps.
-  homepage: https://www.npmjs.com/package/create-santux
-  topics: react, nextjs
+  name: santux
+  description: Applies an opinionated tooling setup to an existing TypeScript project.
+  homepage: https://www.npmjs.com/package/santux
+  topics: cli, eslint, oxc, prettier, typescript
   has_wiki: false
   private: false
   has_issues: true
