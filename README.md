@@ -1,5 +1,8 @@
 # create-santux
 
+> [!WARNING]
+> `create-santux` is deprecated and no longer maintained. It was renamed to [`santux`](https://www.npmjs.com/package/santux), which applies the tooling to an existing project: `npx santux init`.
+
 Project initializer for React and Next.js projects.
 
 ## Usage
