@@ -18,6 +18,9 @@ export const CONFLICT_FILE_PATHS = [
   '.oxfmtrc.json',
   '.oxfmtrc.jsonc',
   ...['ts', 'mts'].map((extension) => `oxfmt.config.${extension}`),
+  '.commitlintrc',
+  ...['json', 'yaml', 'yml', ...JS_EXTENSIONS].map((extension) => `.commitlintrc.${extension}`),
+  ...JS_EXTENSIONS.map((extension) => `commitlint.config.${extension}`),
 ]
 
 /** Dependencies that belong to another lint or format setup. */

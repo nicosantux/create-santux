@@ -32,6 +32,15 @@ describe('inspectProject', () => {
     expect(snapshot.conflictFiles).not.toContain('prettier.config.js')
   })
 
+  it('treats a commitlint config that commitlint would read before ours as a conflict', async () => {
+    await writeFile(join(cwd, 'package.json'), '{}')
+    await writeFile(join(cwd, '.commitlintrc.json'), '{}')
+
+    const snapshot = await inspectProject(cwd)
+
+    expect(snapshot.conflictFiles).toContain('.commitlintrc.json')
+  })
+
   it('reads the package manager config files that exist', async () => {
     await writeFile(join(cwd, 'package.json'), '{}')
     await writeFile(join(cwd, '.npmrc'), 'min-release-age=7\n')
