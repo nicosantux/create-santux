@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/nicosantux/santux/compare/v3.0.0...v3.0.1) (2026-11-15)
+
+
+### 🐛 Bug Fixes
+
+* bump @types/node from 24.19.2 to 26.6.6 ([#394](https://github.com/nicosantux/santux/issues/394)) ([f20f5f5](https://github.com/nicosantux/santux/commit/f20f5f58f385c16a49238c269ea1d0c82cfdd71f))
+
 ## [3.0.0](https://github.com/nicosantux/create-santux/compare/v2.2.3...v3.0.0) (2026-11-14)
 
 

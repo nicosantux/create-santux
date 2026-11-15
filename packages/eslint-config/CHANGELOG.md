@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/nicosantux/santux/compare/eslint-config-v1.0.0...eslint-config-v1.0.1) (2026-11-15)
+
+
+### 🐛 Bug Fixes
+
+* bump eslint-plugin-unicorn from 65.0.1 to 79.0.0 ([#398](https://github.com/nicosantux/santux/issues/398)) ([23303ab](https://github.com/nicosantux/santux/commit/23303ab56cfaac39c7b9740355f3886e2dfe402d))
+
 ## 1.0.0 (2026-11-14)
 
 
