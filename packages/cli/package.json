@@ -1,6 +1,6 @@
 {
   "name": "santux",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Applies an opinionated tooling setup to an existing TypeScript project.",
   "keywords": [
     "commitlint",

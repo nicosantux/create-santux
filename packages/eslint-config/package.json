@@ -1,6 +1,6 @@
 {
   "name": "@santux/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared ESLint, Prettier and commitlint config for TypeScript projects.",
   "keywords": [
     "commitlint",
